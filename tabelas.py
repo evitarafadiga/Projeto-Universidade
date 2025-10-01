@@ -2,11 +2,13 @@ import datetime
 from sqlalchemy import *
 from sqlalchemy.orm import declarative_base, relationship, sessionmaker, joinedload
 from dotenv import load_dotenv, dotenv_values
+import os
+#load_dotenv()
 
-load_dotenv()
+#variaveis_de_ambiente = dotenv_values()
+#DATABASE_URL = variaveis_de_ambiente["DATABASE_URL"] <-- maneira sem Render
 
-variaveis_de_ambiente = dotenv_values()
-DATABASE_URL = variaveis_de_ambiente["DATABASE_URL"]
+DATABASE_URL = os.environ.get('DATABASE_URL') # <-- maneira com Render
 
 engine = create_engine(DATABASE_URL)
 
