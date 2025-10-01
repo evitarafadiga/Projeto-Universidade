@@ -1,0 +1,130 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #222;
+}
+
+/* Container padrão */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  background: #111;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+.logo span {
+  color: #e50914;
+}
+
+.nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+.nav a {
+  color: #fff;
+  text-decoration: none;
+}
+.nav a:hover {
+  color: #e50914;
+}
+
+/* Hero */
+.hero {
+  background: url("https://picsum.photos/1200/600?tech") center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: #e50914;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.btn:hover {
+  background: #b20710;
+}
+
+/* Seções */
+.section {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+.cursos .grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.card {
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f9f9f9;
+  font-weight: bold;
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+input, button {
+  padding: 0.7rem;
+  font-size: 1rem;
+}
+button.btn {
+  border: none;
+  cursor: pointer;
+}
+.mensagem {
+  margin-top: 1rem;
+  color: green;
+  font-weight: bold;
+}
+
+/* Footer */
+.footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+  .hero h2 {
+    font-size: 3rem;
+  }
+  .cursos .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .cursos .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

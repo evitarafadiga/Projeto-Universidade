@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculdade Tech - Landing Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Faculdade<span>Tech</span></h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#cursos">Cursos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Construa seu futuro com a Faculdade Tech</h2>
+            <p>Graduação, pós e cursos livres nas áreas de tecnologia e inovação.</p>
+            <a href="#formulario" class="btn">Inscreva-se agora</a>
+        </div>
+    </section>
+
+
+    <!-- Cursos -->
+    <section id="cursos" class="section cursos">
+        <div class="container">
+            <h2>Nossos Cursos</h2>
+            <div class="grid">
+                <div class="card">Ciência da Computação</div>
+                <div class="card">Engenharia de Software</div>
+                <div class="card">Sistemas de Informação</div>
+                <div class="card">Análise e Desenvolvimento</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulário -->
+    <section id="formulario" class="section form-section">
+        <div class="container">
+            <h2>Cadastre-se</h2>
+            <form id="cadastroForm" method="POST">
+                <label for="usuario">Nome:</label>
+                <input type="text" id="usuario" name="usuario" required>
+
+                <label for="email">E-mail:</label>
+                <input type="text" id="email" name="email" required>
+
+                <label for="senha">Senha:</label>
+                <input type="text" id="senha" name="senha" required>
+
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" name="titulo" required>
+
+                <label for="nota">Nota:</label>
+                <input type="text" id="nota" name="nota" height="300px" required>
+
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+            <p id="mensagem" class="mensagem"></p>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>&copy; 2025 Faculdade Tech. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
